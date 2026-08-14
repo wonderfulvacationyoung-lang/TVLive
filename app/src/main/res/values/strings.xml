@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">广东卫视直播</string>
+    <string name="loading">加载中...</string>
+    <string name="play_error">播放失败，请检查网络</string>
+    <string name="help_text">← → 换台 | 数字键选台 | ↑ 频道列表 | 中键刷新 | 返回键退出</string>
+</resources>
