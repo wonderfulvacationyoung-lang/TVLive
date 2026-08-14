@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    // 兼容 Android 4.4 (API 19) —— 不用 AndroidX
+    compileSdkVersion 19
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.gdtv.live"
+        minSdkVersion 19
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // 不用 AndroidX
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    // 不引入任何 AndroidX / Support Library 依赖
+    // WebView 是系统自带组件，无需额外依赖
+}
