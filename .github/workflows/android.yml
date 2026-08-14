@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:   # ←加上这一行，才会出现手动运行按钮
 
 jobs:
   build:
@@ -25,7 +26,6 @@ jobs:
     - name: Build debug APK
       run: ./gradlew assembleDebug
 
-    # 关键：把编译出来的APK上传为产物，没有这一段就没有下载入口
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
